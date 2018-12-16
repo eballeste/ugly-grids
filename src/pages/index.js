@@ -1,17 +1,14 @@
 import React from 'react'
 
 import Layout from 'components/layout'
-import Image from 'components/image'
 
-import styles from './index.module.scss'
+import styles from 'styles/pages/index.module.scss'
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.container}>
-      <div className={styles.logo}>
-        <Image />
-      </div>
-    </div>
+    <main className={styles.main}>
+      <div class={styles.title}>CSS Grid Experiments</div>
+    </main>
   </Layout>
 )
 
