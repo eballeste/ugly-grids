@@ -3,6 +3,7 @@ module.exports = {
     title: 'Ugly Grids',
     description: 'css grid layout experiments'
   },
+  pathPrefix: "/ugly-grids",
   plugins: [
     'gatsby-plugin-react-helmet',
     {

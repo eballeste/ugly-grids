@@ -1,5 +1,5 @@
 {
-  "name": "uglygrids",
+  "name": "ugly-grids",
   "description": "css grid layout experiments",
   "version": "1.0.0",
   "author": "Enrique Ballesté <enrique.balleste@gmail.com>",
@@ -20,7 +20,8 @@
   "keywords": [
     "gatsby",
     "sass",
-    "css-modules"
+    "css-modules",
+    "css grids"
   ],
   "license": "MIT",
   "scripts": {
@@ -28,14 +29,16 @@
     "develop": "gatsby develop",
     "start": "npm run develop",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public --message \"deploy static files\""
   },
   "devDependencies": {
     "gatsby-plugin-root-import": "^2.0.4",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.15.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/eballeste/uglygrids"
+    "url": "https://github.com/eballeste/ugly-grids"
   }
 }
