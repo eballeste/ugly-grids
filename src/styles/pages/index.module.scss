@@ -2,29 +2,61 @@
 
 .main {
   display: grid;
-  grid-template-areas:
-    ". . ."
-    ". title ."
-    ". . .";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
   height: 100vh;
 }
 
 .title {
-  grid-area: title;
-  color: $color-koamaru;
-  @include dinosaur;
-  font-size: 4.5rem;
-  line-height: 3.55rem;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
   position: relative;
+  background-color: $color-pink;
+  border-radius: 25px;
+  padding: 2.25rem;
+  mix-blend-mode: screen;
+
+  @include media('>tablet') {
+    padding: 3rem;
+  }
+
+  > h1 {
+    @include dinosaur;
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    color: $color-dark-blue;
+
+    @include media('>tablet') {
+      font-size: 4.5rem;
+      line-height: 3.55rem;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    background-color: $color-pink;
+    mix-blend-mode: overlay;
+    border-radius: 25px;
+    z-index: -2;
+  }
 
   &:after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 10%;
-    top: 7%;
-    left: -10px;
-    background-color: rgba($color-olive, 0.5%);
+    height: 100%;
+    top: 20px;
+    left: 20px;
+    background-color: $color-dark-blue;
+    mix-blend-mode: overlay;
+    border-radius: 25px;
     z-index: -1;
   }
 }

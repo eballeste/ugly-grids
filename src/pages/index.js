@@ -7,7 +7,7 @@ import styles from 'styles/pages/index.module.scss'
 const IndexPage = () => (
   <Layout>
     <main className={styles.main}>
-      <div class={styles.title}>CSS Grid Experiments</div>
+      <div className={styles.title}><h1>CSS Grid Experiments</h1></div>
     </main>
   </Layout>
 )

@@ -7,4 +7,6 @@ body {
   line-height: 20px;
   color: $color-black;
   background-color: $color-white;
+  background-image: url('../../images/bg-pattern.png');
+  mix-blend-mode: multiply;
 }
