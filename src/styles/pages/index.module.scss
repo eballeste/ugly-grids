@@ -16,7 +16,7 @@
   background-color: $color-pink;
   border-radius: 25px;
   padding: 2.25rem;
-  mix-blend-mode: screen;
+  mix-blend-mode: multiply;
   transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
 
   @include media('>tablet') {
@@ -48,7 +48,7 @@
     top: 10px;
     left: 10px;
     background-color: $color-pink;
-    mix-blend-mode: overlay;
+    mix-blend-mode: screen;
     border-radius: 25px;
     z-index: -2;
   }
