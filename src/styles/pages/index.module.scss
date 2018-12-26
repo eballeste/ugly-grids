@@ -2,67 +2,156 @@
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: 20px max-content 40px;
   align-items: center;
   justify-items: center;
-  height: 100vh;
-}
+  min-height: 100vh;
+  height: 100%;
 
-.title {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  position: relative;
-  background-color: $color-pink;
-  border-radius: 25px;
-  padding: 2.25rem;
-  mix-blend-mode: multiply;
-  transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-
-  @include media('>tablet') {
-    padding: 3rem;
+  &__titlebox {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  &:active {
-    top: 1px;
-  }
-
-  > h1 {
-    @include dinosaur;
-    font-size: 2.5rem;
-    line-height: 2.25rem;
-    color: $color-dark-blue;
+  &__title {
+    position: relative;
+    background-color: $color-pink;
+    border-radius: 25px;
+    padding: 1.25rem;
+    mix-blend-mode: multiply;
     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    grid-column: 2;
 
-    @include media('>tablet') {
-      font-size: 4.5rem;
-      line-height: 3.55rem;
+    @include media('>=tablet') {
+      padding: 2.25rem;
+    }
+
+    @include media('>=desktop') {
+      padding: 3rem;
+    }
+
+    &:active {
+      top: 1px;
+    }
+
+    > h1 {
+      @include dinosaur;
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+      color: $color-dark-blue;
+      transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+      @include media('>=tablet') {
+        font-size: 2.5rem;
+        line-height: 2.25rem;
+      }
+
+      @include media('>=desktop') {
+        font-size: 4.5rem;
+        line-height: 3.55rem;
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      left: 10px;
+      background-color: $color-pink;
+      mix-blend-mode: screen;
+      border-radius: 25px;
+      z-index: -2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 20px;
+      left: 20px;
+      background-color: $color-dark-blue;
+      mix-blend-mode: overlay;
+      border-radius: 25px;
+      z-index: -1;
     }
   }
 
-  &:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 10px;
-    left: 10px;
-    background-color: $color-pink;
-    mix-blend-mode: screen;
-    border-radius: 25px;
-    z-index: -2;
+  &__listbox {
+    grid-column: 2 / -2;
+    grid-row-start: 4;
+    justify-self: stretch;
+    align-self: stretch;
+    display: grid;
+    grid-gap: 12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    align-items: start;
+    justify-items: center;
+
+    @include media('>=tablet') {
+      grid-template-columns: repeat(5, 1fr);
+      grid-gap: 16px;
+    }
+
+    @include media('>=desktop') {
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 20px;
+    }
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 20px;
-    left: 20px;
-    background-color: $color-dark-blue;
-    mix-blend-mode: overlay;
+  &__link {
+    background-color: $color-pink;
     border-radius: 25px;
-    z-index: -1;
+    padding: 1.25rem;
+    mix-blend-mode: multiply;
+    transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+    position: relative;
+    @include interstate;
+    font-size: 2.5rem;
+    line-height: 2.25rem;
+    color: $color-dark-blue;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 10px;
+      left: 10px;
+      background-color: $color-pink;
+      mix-blend-mode: screen;
+      border-radius: 25px;
+      z-index: -2;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 20px;
+      left: 20px;
+      background-color: $color-dark-blue;
+      mix-blend-mode: overlay;
+      border-radius: 25px;
+      z-index: -1;
+    }
+
+    &:active {
+      top: 1px;
+    }
+  }
+
+  &__empty {
+    background-color: yellow;
   }
 }
