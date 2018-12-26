@@ -17,6 +17,7 @@
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
+  cursor: header;
 
   &__title {
     position: relative;
