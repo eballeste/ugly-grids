@@ -44,6 +44,7 @@
       font-size: ms(3);
       color: $color-dark-blue;
       transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+      text-align: center;
 
       @include media('>=tablet') {
         font-size: ms(4);
