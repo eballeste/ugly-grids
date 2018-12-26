@@ -41,19 +41,16 @@
 
     > h1 {
       @include dinosaur;
-      font-size: 1.5rem;
-      line-height: 1.25rem;
+      font-size: ms(3);
       color: $color-dark-blue;
       transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
 
       @include media('>=tablet') {
-        font-size: 2.5rem;
-        line-height: 2.25rem;
+        font-size: ms(4);
       }
 
       @include media('>=desktop') {
-        font-size: 4.5rem;
-        line-height: 3.55rem;
+        font-size: ms(5);
       }
     }
 
@@ -116,8 +113,7 @@
     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
     position: relative;
     @include interstate;
-    font-size: 2.5rem;
-    line-height: 2.25rem;
+    font-size: ms(3);
     color: $color-dark-blue;
     cursor: pointer;
 
