@@ -12,7 +12,7 @@ const IndexPage = () => (
         <div className={styles.header__title} onClick={() => navigate('/')}><h1>Responsive Aspect Ratios</h1></div>
       </header>
       <section className={styles.description}>
-        <div className={styles.description__text}><p>Build a responsive grid that respects aspect ratios. Every 3rd pixel has a 2:1 ratio for tablet and desktop widths. Every 5th pixel has a blue background. Every 7th pixel has a dark blue background and is aligned to the right of the grid.</p></div>
+        <div className={styles.description__text}><p>Build a responsive grid that respects aspect ratios. Every 3rd pixel has a 2:1 ratio for tablet and desktop widths. Every 5th pixel adds a blue layer. Every 7th pixel adds a dark blue layer and is aligned to the right of the grid.</p></div>
       </section>
       <section className={styles.grid}>
         <div className={styles.grid__pixel}>1</div>
