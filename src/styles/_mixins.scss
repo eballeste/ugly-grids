@@ -1,0 +1,21 @@
+@mixin make-wavy-line($size, $thickness, $color) {
+  $spacing: $size / 1.41421;
+  $color-begin: $spacing - $thickness / 2;
+  $color-end: $spacing + $thickness / 2;
+
+  height: $size;
+  background:
+      linear-gradient(45deg,
+          transparent $color-begin,
+          $color $color-begin,
+          $color $color-end,
+          transparent $color-end
+      ),
+      linear-gradient(135deg,
+          transparent $color-begin,
+          $color $color-begin,
+          $color $color-end,
+          transparent $color-end
+      ) $size 0;
+  background-size: $size * 2 $size;
+}

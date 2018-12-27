@@ -16,3 +16,20 @@ body {
 h1, h2, h3 {
   line-height: 1;
 }
+
+p {
+  > a {
+    color: $color-dark-blue;
+    text-decoration: underline;
+    transition: color 0.2s ease-in;
+    position: relative;
+
+    &:hover {
+      color: $color-blue;
+    }
+
+    &:active {
+      top: 1px;
+    }
+  }
+}

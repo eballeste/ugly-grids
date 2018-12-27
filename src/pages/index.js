@@ -13,6 +13,7 @@ const IndexPage = () => (
       </header>
       <nav className={styles.links}>
         <div className={styles.links__link} onClick={() => navigate('/exp-1')}>1</div>
+        <div className={styles.links__link} onClick={() => navigate('/exp-2')}>2</div>
       </nav>
     </div>
   </Layout>

@@ -97,6 +97,7 @@
     mix-blend-mode: multiply;
     text-align: center;
     position: relative;
+    width: 100%;
 
     @include media('>=tablet') {
       padding: 1.5rem;
