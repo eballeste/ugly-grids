@@ -196,15 +196,15 @@
     }
 
     &:nth-child(3n) {
+      &:after {
+        background-color: $color-pink;
+      }
+
       @include media('>=tablet') {
         grid-column-start: span 2;
 
         &:before {
           padding-top: calc(50% - 8px);
-        }
-
-        &:after {
-          background-color: $color-pink;
         }
       }
     }
