@@ -6,7 +6,7 @@
 }
 
 @mixin interstate() {
-  font-family: interstate, sans-serif;
+  font-family: interstate-mono, monospace;
   font-weight: 700;
   font-style: normal;
   @include font-smoothing;
