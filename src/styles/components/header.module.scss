@@ -13,7 +13,6 @@
   &__title {
     position: relative;
     background-color: $color-pink;
-    border-radius: 25px;
     padding: 1.125rem;
     mix-blend-mode: multiply;
     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -55,7 +54,6 @@
       left: 10px;
       background-color: $color-pink;
       mix-blend-mode: screen;
-      border-radius: 25px;
       z-index: -2;
     }
 
@@ -68,7 +66,6 @@
       left: 20px;
       background-color: $color-dark-blue;
       mix-blend-mode: overlay;
-      border-radius: 25px;
       z-index: -1;
     }
   }

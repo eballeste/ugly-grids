@@ -8,7 +8,6 @@
     @include dinosaur;
     background-color: $color-pink;
     color: $color-dark-blue;
-    border-radius: 25px;
     padding: 1rem;
     mix-blend-mode: multiply;
     text-align: center;
@@ -33,7 +32,6 @@
       left: 5px;
       background-color: $color-pink;
       mix-blend-mode: screen;
-      border-radius: 25px;
       z-index: -2;
     }
 
@@ -46,7 +44,6 @@
       left: 10px;
       background-color: $color-dark-blue;
       mix-blend-mode: overlay;
-      border-radius: 25px;
       z-index: -1;
     }
   }
