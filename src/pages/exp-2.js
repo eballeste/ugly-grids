@@ -1,16 +1,14 @@
 import React from 'react'
-import { navigate } from 'gatsby'
 
 import Layout from 'components/layout'
+import Header from 'components/header'
 
 import styles from 'styles/pages/exp-2.module.scss'
 
 const IndexPage = () => (
   <Layout>
     <div className={styles.container}>
-      <header className={styles.header}>
-        <div className={styles.header__title} onClick={() => navigate('/')}><h1>Responsive Magazine Layout</h1></div>
-      </header>
+      <Header link='/'><h1>Responsive Magazine Layout</h1></Header>
       <section className={styles.description}>
         <div className={styles.description__text}><p>Build a responsive magazine layout based on an <a href="https://www.behance.net/gallery/51296679/Computer-Arts-Magazine-layout-design" rel="noopener noreferrer" target="_blank">art direction mockup</a>.</p></div>
       </section>
