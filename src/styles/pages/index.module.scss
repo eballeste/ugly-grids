@@ -16,11 +16,12 @@
   justify-self: stretch;
   align-self: stretch;
   display: grid;
-  grid-gap: 12px;
+  grid-gap: 8px;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-flow: dense;
   align-items: start;
   justify-items: center;
+  z-index: 1;
 
   @include media('>=tablet') {
     grid-template-columns: repeat(5, 1fr);
@@ -33,9 +34,8 @@
   }
 
   &__link {
-    background-color: $color-pink;
-    padding: 1.25rem;
-    mix-blend-mode: multiply;
+    background-color: rgba($color-white, 0.75);
+    padding: .5rem;
     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
     position: relative;
     @include interstate;
@@ -48,10 +48,10 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 10px;
-      left: 10px;
+      top: -4px;
+      left: -4px;
       background-color: $color-pink;
-      mix-blend-mode: screen;
+      mix-blend-mode: overlay;
       z-index: -2;
     }
 
@@ -60,8 +60,8 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 20px;
-      left: 20px;
+      top: 4px;
+      left: 4px;
       background-color: $color-dark-blue;
       mix-blend-mode: overlay;
       z-index: -1;

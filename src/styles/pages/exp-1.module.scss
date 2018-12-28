@@ -22,7 +22,7 @@
   justify-items: center;
   grid-gap: 16px;
   background-color: rgba($color-white, 0.5);
-  border: 10px solid $color-dark-blue;
+  border: 8px solid $color-dark-blue;
   padding: 16px;
 
   @include media('>=tablet') {

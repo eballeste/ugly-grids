@@ -9,22 +9,13 @@
   grid-template-columns: 0.25fr 1fr 0.25fr;
   cursor: pointer;
   text-align: center;
+  position: relative;
+  z-index: 1;
 
   &__title {
-    position: relative;
-    background-color: $color-pink;
-    padding: 1.125rem;
-    mix-blend-mode: multiply;
     transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
     grid-column: 2;
-
-    @include media('>=tablet') {
-      padding: 2rem;
-    }
-
-    @include media('>=desktop') {
-      padding: 3rem;
-    }
+    position: relative;
 
     &:active {
       top: 1px;
@@ -35,13 +26,18 @@
       font-size: ms(3);
       color: $color-dark-blue;
       transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+      background-color: rgba($color-white, 0.75);
+      padding: 1.125rem;
+      isolation: isolate;
 
       @include media('>=tablet') {
         font-size: ms(4);
+        padding: 2rem;
       }
 
       @include media('>=desktop') {
         font-size: ms(5);
+        padding: 3rem;
       }
     }
 
@@ -50,11 +46,11 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 10px;
-      left: 10px;
+      top: -8px;
+      left: -8px;
       background-color: $color-pink;
-      mix-blend-mode: screen;
       z-index: -2;
+      mix-blend-mode: overlay;
     }
 
     &:after {
@@ -62,11 +58,11 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      top: 20px;
-      left: 20px;
+      top: 8px;
+      left: 8px;
       background-color: $color-dark-blue;
-      mix-blend-mode: overlay;
       z-index: -1;
+      mix-blend-mode: overlay;
     }
   }
 }
