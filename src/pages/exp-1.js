@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from 'components/layout'
 import Header from 'components/header'
+import Description from 'components/description'
 
 import styles from 'styles/pages/exp-1.module.scss'
 
@@ -9,9 +10,9 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.container}>
       <Header link='/'><h1>Responsive Aspect Ratios</h1></Header>
-      <section className={styles.description}>
-        <div className={styles.description__text}><p>Build a responsive grid that respects aspect ratios. Every 3rd pixel adds a pink layer and has a 2:1 aspect ratio for tablet and desktop widths. Every 5th pixel adds a blue layer. Every 7th pixel adds a dark blue layer and is aligned to the right of the grid.</p></div>
-      </section>
+      <Description>
+        <p>Build a responsive grid that respects aspect ratios. Every 3rd pixel adds a pink layer and has a 2:1 aspect ratio for tablet and desktop widths. Every 5th pixel adds a blue layer. Every 7th pixel adds a dark blue layer and is aligned to the right of the grid.</p>
+      </Description>
       <section className={styles.grid}>
         <div className={styles.grid__pixel}>1</div>
         <div className={styles.grid__pixel}>2</div>

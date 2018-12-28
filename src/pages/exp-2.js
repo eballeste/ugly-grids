@@ -2,6 +2,7 @@ import React from 'react'
 
 import Layout from 'components/layout'
 import Header from 'components/header'
+import Description from 'components/description'
 
 import styles from 'styles/pages/exp-2.module.scss'
 
@@ -9,9 +10,9 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.container}>
       <Header link='/'><h1>Responsive Magazine Layout</h1></Header>
-      <section className={styles.description}>
-        <div className={styles.description__text}><p>Build a responsive magazine layout based on an <a href="https://www.behance.net/gallery/51296679/Computer-Arts-Magazine-layout-design" rel="noopener noreferrer" target="_blank">art direction mockup</a>.</p></div>
-      </section>
+      <Description>
+        <p>Build a responsive magazine layout based on an <a href="https://www.behance.net/gallery/51296679/Computer-Arts-Magazine-layout-design" rel="noopener noreferrer" target="_blank">art direction mockup</a>.</p>
+      </Description>
       <main className={styles.magazine}>
         <div className={styles.magazine__header}><h2><span><span>1</span><span>2</span></span> rules <span><span>of type</span></span></h2></div>
         <div className={styles.magazine__left}>
